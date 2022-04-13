@@ -1,11 +1,13 @@
-function pegaNumeroAleatorio(numeroMinimo, numeroMaximo){
-    const numero = Math.random() * (numeroMinimo - numeroMaximo) + numeroMinimo
-    return Math.floor(numero)
+function getInteiroAleatorioEntre(min, max){
+    const valor = Math.random() * (max - min) + min
+    return Math.floor(valor)
 }
-let numero1 = -1
-do{
-    numero1 = pegaNumeroAleatorio(-1, 10)
-    console.log(`o numero foi ${numero1}`)
-}while (numero1 != -1)
 
-console.log('agora o numero foi 1')
+let opcao = -1
+
+do{
+    opcao = getInteiroAleatorioEntre(-1, 10)
+    console.log(`Opção escolhida foi ${opcao}.`)
+}while (opcao != -1)
+
+console.log(`Até a próxima!`)
