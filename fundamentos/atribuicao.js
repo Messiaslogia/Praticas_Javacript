@@ -1,8 +1,18 @@
-// atribuidores ou operadores de atribuiçao
-const a = 7;
-let b = 3;
-console.log(b += a)
-console.log(b -= a)
-console.log(b *= 2)
-console.log(b/=2)
+const a = 7
+let b = 3
+
+b += a // b = b + a
 console.log(b)
+
+b -= a // b = b - a
+console.log(b)
+
+b *= a // b = b * a
+console.log(b)
+
+b /= a // b = b / a
+console.log(b)
+
+b %= a // b = b % a
+console.log(b)
+

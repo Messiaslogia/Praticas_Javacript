@@ -1,6 +1,14 @@
+//novo recurso do ES2015
+//Destructuring Objetos
+
 function rand({min = 0, max = 1000}){
     const valor = Math.random() * (max - min) + min
     return Math.floor(valor)
 }
-const objeto = {max:50, min:40}
-console.log(rand({max: 50, min: 40}))
+
+const obj = { max: 50, min: 40}
+console.log(rand(obj))
+console.log(rand({min: 955}))
+console.log(rand({}))
+console.log(rand()) // desestrutura algo que é undefined (erro)
+
