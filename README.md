@@ -6,3 +6,5 @@ Aqui começo meus estudos sobre a linguagem Javascript:
  13/04/2022 - Treinando exercicios do 09 ao 13
  
  18/04/2022 - Fazendo exercicios do 22 ao 30
+ 
+ 25/04/2022 - Fazendo Exercicios do 35 ao 40
