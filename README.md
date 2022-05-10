@@ -10,3 +10,5 @@ Aqui começo meus estudos sobre a linguagem Javascript:
  25/04/2022 - Fazendo Exercicios do 35 ao 40
 
  28/04/2022 - Entrei no seção de objetos
+
+ 09/05/2022 - Já terminei os promeiros exercícios e estou fazendo a parte de array 
