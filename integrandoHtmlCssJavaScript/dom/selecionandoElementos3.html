@@ -31,7 +31,24 @@
         <button>Pesquisar</button>
     </form>
     <script>
-        // ...
+
+        //Retorna um HTML collection
+        //Acessando os forms
+
+        console.log(document.forms)
+        console.log(document.forms[0])
+
+        //define qual form voce quer acessar pelo name dele
+        console.log(document.getElementsByName('pesquisa')) //retorna um Nodelist
+        console.log(document.pesquisa)
+
+        //acessando por anotação ponto 
+        console.log(document.pesquisa.q)
+        document.pesquisa.q.value = 'Linux' //alteração de campo value
+        document.pesquisa.hl.value = 'en-us'
+        console.log(document.pesquisa.hl.selectedIndex) //selected retorna o index do select
+
+        
     </script>
 </body>
 
