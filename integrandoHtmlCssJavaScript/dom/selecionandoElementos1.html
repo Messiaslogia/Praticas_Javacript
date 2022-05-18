@@ -5,12 +5,27 @@
     <title>Selecionar Elementos #01</title>
     <link rel="stylesheet" href="css/estilo.css">
 </head>
-<body class="conteudo exercicio">
-    <div id="primeiro">#primeiro</div>
-    <div>Segundo</div>
-    <div class="terceiro ultimo">.terceiro .ultimo</div>
-    <script>              
-        // ...
+<body class='conteudo exercicio'>
+    <div>
+        <a href='https://www.cod3r.com.br'>Cod3r</a>
+    </div>
+    <div id='primeiro'>
+        <img src='http://files.cod3r.com.br/curso-web/logo-estreita.png' alt='logo'>
+    </div>
+    <script>
+        //Retorna um HTML Collection
+
+        document.getElementById('primeiro').classList.add('destaque') //Pega o ID do elemento
+
+        
+        const divs = document.getElementsByTagName('div')// Pega a Tag do elemento
+        Array.from(divs).forEach(e=>e.classList.add('destaques'))//Transforma um HTML colletion em um Array
+
+        //Consegue percorrer o array pelo nome da class
+        const ultimosElementos = document.getElementsByClassName('ultimo')// Pega o nome da classe
+        for(let a of ultimosElementos){
+            e.classList.remove('destaque')
+        }
     </script>
 </body>
 </html>
