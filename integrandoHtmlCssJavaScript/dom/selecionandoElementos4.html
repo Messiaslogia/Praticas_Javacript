@@ -22,7 +22,44 @@
         <p>Fim</p>
     </div>
     <script>
-        // ...
+        function log() {
+            console.log(this)
+        }
+
+        HTMLCollection.prototype.log = log
+        HTMLElement.prototype.log = log
+        NodeList.prototype.log = log
+        Node.prototype.log = log
+
+        const lista = document.querySelector('div ul')
+        lista.parentNode.log() //Pega o elemento pai 
+        lista.childNodes.log() //Pega a lista de nós do elemento retorna os textos
+
+        //Pegando o primeiro elemento da lista
+        const primeiro = list.firstChild
+        primeiro.log()
+        primeiro.nextSibling.log()//Retornando o irmão do primeiro elemento
+        
+        //Pegando o ultimo elemento da lista
+        const ultimo = lista.lastChild
+        ultimo.log()
+        ultimo.previousSibling.log() //Retorna o ultimo elemento da lista 
+
+        //Pegar todos os nós filhos
+        lista.children.log() //traz os elementos definidos 
+        lista.firstElementChild.log() // Traz exatamente o primeiro elemento da lista sem os espaços
+        lista.lastElementChild.log() // Ultimo elemento da lista
+
+        lista.parentNode.previousElementSibling.log() //Pega o elemento anterior no caso a DIV inicio
+        lista.parentNode.nextElementSibling.log() //Pega o proximo elemento DIV
+
+        document.querySelectorall('div ul li').log() //Traz os elementos de uma forma que não precisa percorrer 
+
+
+
+
+
+
     </script>
 </body>
 
