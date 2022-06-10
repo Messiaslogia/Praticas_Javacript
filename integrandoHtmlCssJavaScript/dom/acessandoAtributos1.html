@@ -15,19 +15,28 @@
         <img src='http://files.cod3r.com.br/curso-web/logo-estreita.png' alt='logo'>
     </div>
     <script>
-        //Retorna um HTML Collection
+       const img = document.querySelector('img') //Seleciona um elemento do tipo imagem
+       console.log('getAtribute', img.getAttribute('scr')) //Acessa o atributo do elemento apartir de uma string
+       console.log('getAtribute', img.scr) //Acessa o atributo do elemento com o nome do atributo
+       console.log('getAtribute', img["scr"]) //Acessa o atributo através de cochetes
+       console.log('alt', img.alt) //acessando outros atributos atráves do nome deles
 
-        document.getElementById('primeiro').classList.add('destaque') //Pega o ID do elemento
+       console.log('Elemento img.............')
+       conosle.log('NodeType', img.nodeType) //Devolve um Nodetype 1 que significa Elemento
+       console.log('NodeName', img.nodeName) //Retorna o nome do Elemento
 
-        
-        const divs = document.getElementsByTagName('div')// Pega a Tag do elemento
-        Array.from(divs).forEach(e=>e.classList.add('destaques'))//Transforma um HTML colletion em um Array
+       const src = img.getAttributeNode('scr') //Retorna um nó do atributo do Elemento
+       console.log('Atributo "src".............')
+       console.log('Atributo "src"..............')
+       console.log('NodeType', src.nodeType)
+       console.log('NodeName', src.nodeName)
+       console.log('NodeValue', scr. nodeValue)// Retorna o valor do atributo
 
-        //Consegue percorrer o array pelo nome da class
-        const ultimosElementos = document.getElementsByClassName('ultimo')// Pega o nome da classe
-        for(let a of ultimosElementos){
-            e.classList.remove('destaque')
-        }
+       const link = document.querySelector('a') 
+       console.log('Atributo "a"..............')
+       console.log('href', link.href)
+       console.log('firstChild.nodeType', link.firstChild.nodeType) //Pega o primeiro filho do elemento
+       link.firstChild.nodeValue = 'Novo Texto' //Muda o value do elemento
     </script>
 </body>
 
