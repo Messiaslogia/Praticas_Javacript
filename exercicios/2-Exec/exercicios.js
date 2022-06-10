@@ -1,0 +1,4 @@
+function greetings(name) {
+    return 
+    
+}
