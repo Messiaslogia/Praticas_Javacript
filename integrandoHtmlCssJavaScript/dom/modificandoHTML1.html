@@ -9,7 +9,31 @@
 
 <body class='conteudo exercicio'>
     <script>
-        // ...
+        const body = document.querySelector('body')
+
+        const div1 = document.createElement('div') //Cria um elemento
+        div1.classList.add('destaque') //Adiciona uma classe ao elemento
+        div1.innerHTML = 'Primeiro' // Adiciona um conteudo dentro do elemento
+
+        const div2 = document.createElement('div')
+        div2.setAttribute('wm-atributo', 'valor') //Pega o atributo do elemento e pode modificalo
+        div2.innerHTML = 'Segundo'
+
+        const p = document.createElement('p')
+        p.innerHTML = 'Terceiro'
+        const div3 = document.createElement('div')
+        div3.appendChild(p) //Posiciona ele como o ultimo elemento dentro de uma div
+
+        body.appendChild(div1)
+        body.appendChild(div2)
+        body.appendChild(div3) // COmo  ela tem filhos eles são adicionados também 
+
+        const texto = document.createTextNode('Antes...') //Criou um texto com o elemento createTextNode
+        div3.insertBefore(texto, div3.childNodes[0]) //Adiciona o elemento antes da posição de referencia [0]
+
+        const div4 = div3.cloneNode(true) //Clona o elemento atual, se colocar true ele clona junto com os filhos do elemento
+        body.appendChild(div4)
+        body.removeChild(div3) //Possibilidade de excluir o nó da DOMElement
     </script>
 </body>
 

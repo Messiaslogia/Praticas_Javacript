@@ -10,6 +10,18 @@
 <body class="conteudo exercicio">
     <div>Elemento</div>
     <script>
-        // ...
+        //Esse item é está armazenando a <div>
+        const item = document.querySelector('div')
+        item.style.position = 'absolute'
+ 
+        item.onmousemove = e => {
+            //Aqui o item armazenará o e.target. Falarei dele abaixo.             
+            const item = e.target
+            item.style.cursor = 'move'
+            if (e.buttons) {
+                item.style.top = `${e.clientY - (item.clientHeight / 2)}px`
+                item.style.left = `${e.clientX - (item.clientWidth / 2)}px`
+            }
+        }
     </script>
 </body>
