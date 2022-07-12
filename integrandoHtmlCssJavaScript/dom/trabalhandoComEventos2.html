@@ -10,14 +10,13 @@
 <body class="conteudo exercicio">
     <div>Elemento</div>
     <script>
-        //Esse item é está armazenando a <div>
-        const item = document.querySelector('div')
-        item.style.position = 'absolute'
+       
+        const item = document.querySelector('div')  //Esse item é está armazenando a <div>
+        item.style.position = 'absolute' //Modificando um atributo css 
  
-        item.onmousemove = e => {
-            //Aqui o item armazenará o e.target. Falarei dele abaixo.             
-            const item = e.target
-            item.style.cursor = 'move'
+        item.onmousemove = e => {            
+            const item = e.target  //target é o elemento que disparou o evento 
+            item.style.cursor = 'move' //Tipo de ação selecionada pelo css
             if (e.buttons) {
                 item.style.top = `${e.clientY - (item.clientHeight / 2)}px`
                 item.style.left = `${e.clientX - (item.clientWidth / 2)}px`

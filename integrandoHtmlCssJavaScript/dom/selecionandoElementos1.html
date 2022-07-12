@@ -8,20 +8,18 @@
 <body class='conteudo exercicio'>
     <div id="primeiro">#primeiro</div>
     <div>Segundo</div>
-    <div class="ultimo terceiro"><span wb-attrib>.Terceiro .ultmo</span></div>
+    <div class="ultimo terceiro"><span wb-attrib>.Terceiro .ulitmo</span></div>
     <script>
         //Retorna um HTML Collection
+        document.getElementById('primeiro').classList.add('destaque') //Pega o ID do elemento e adiciona uma classe a ele
 
-        document.getElementById('primeiro').classList.add('destaque') //Pega o ID do elemento
-
-        
         const divs = document.getElementsByTagName('div')// Pega a Tag do elemento
         Array.from(divs).forEach(e=>e.classList.add('destaques'))//Transforma um HTML colletion em um Array
 
         //Consegue percorrer o array pelo nome da class
         const ultimosElementos = document.getElementsByClassName('ultimo')// Pega o nome da classe
         for(let a of ultimosElementos){
-            e.classList.remove('destaque')
+            e.classList.remove('destaque') //Removendo a classe do elemento
         }
     </script>
 </body>

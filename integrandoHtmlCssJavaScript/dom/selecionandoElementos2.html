@@ -12,26 +12,26 @@
 
     <script>
         //Retorna um nodeList
-       document.querySelector('#primeiro').classList.add('destaque')
+       document.querySelector('#primeiro').classList.add('destaque') //Adiciona uma classe para o elemento
 
         const selecionar = seletor =>
-            document.querySelectorAll(seletor).forEach(e => e.classList.add('destaque'))
+            document.querySelectorAll(seletor).forEach(e => e.classList.add('destaque')) //Funções anônimas para adicionar novas classes
 
         const descelecionar = seletor =>
-            document.querySelectorAll(seletor).forEach(e => e.classList.remove('destaque'))
+            document.querySelectorAll(seletor).forEach(e => e.classList.remove('destaque')) //Funções anônimas para remover uma classe novas classes
         
-            selecionar('div')
+            selecionar('*')
 
-            descelecionar('*')
-            selecionar('.terceiro.ultimo')
+            descelecionar('div') //Removeu a classe de todas as divs
+            selecionar('.terceiro.ultimo')// Seleciona o ultimo elemento pela classe
         
-            descelecionar('*')
-            selecionar(':not(#primeiro)')// negação :not
+            descelecionar('*') //Remove a Classe de todos os elementos
+            selecionar(':not(#primeiro)')// negação :not -> Seleciona todos mesmo o ID informado
 
-            descelecionar('*')
-            selecionar(':nth-child(1)') //primeiro filho do elemento
+            descelecionar('*') //Remove a Classe de todos os elementos
+            selecionar(':nth-child(1)') //primeiro filho de todos os elementos
 
-            descelecionar('*')
+            descelecionar('*')//Remove a Classe de todos os elementos
             selecionar('div:nth-of-type(1)') //primeiro elemento do tipo DIV
 
             descelecionar('*')
