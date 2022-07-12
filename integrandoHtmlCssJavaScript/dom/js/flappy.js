@@ -18,6 +18,7 @@ function novoElemento(tagName, className) {
  * Cria uma barreira  com corpo e borda
  */
 function Barreira(reversa = false) {
+
   /**Cria divs no elemento  */
   this.elemento = novoElemento("div", "barreira");
   const borda = novoElemento("div", "borda");
@@ -78,7 +79,19 @@ function ParDeBarreiras(altura, abertura, x) {
 // const b = new ParDeBarreiras(700, 200, 200);
 // document.querySelector("[wm-flappy]").appendChild(b.elemento); 
 
+/**
+ * Cria 4 par de barreiras com distancias diferentes
+ * velocidades de animação
+ * 
+ * @param {Interger} altura 
+ * @param {Interger} largura 
+ * @param {Interger} abertura 
+ * @param {Interger} espaco 
+ * @param {Interger} notificarPonto 
+ */
 function Barreiras(altura, largura, abertura, espaco, notificarPonto) {
+
+  //Array com 4 pares de barreiras, a largura entre eles é diferente
   this.pares = [
     new ParDeBarreiras(altura, abertura, largura),
     new ParDeBarreiras(altura, abertura, largura + espaco),
@@ -86,6 +99,8 @@ function Barreiras(altura, largura, abertura, espaco, notificarPonto) {
     new ParDeBarreiras(altura, abertura, largura + espaco * 3),
   ];
 
+  
+//Realoca as barreiras para o final da DIV
   const deslocamento = 3;
   this.animar = () => {
     this.pares.forEach((par) => {
@@ -105,15 +120,24 @@ function Barreiras(altura, largura, abertura, espaco, notificarPonto) {
   };
 }
 
+
+/**
+ * 
+ * 
+ * @param {*} alturaJogo 
+ */
 function Passaro(alturaJogo) {
+  
   let voando = false;
 
   this.elemento = novoElemento("img", "passaro");
   this.elemento.src = "imgs/max.png";
 
+  //Pega a posição Y do Elemento e Seta uma nova
   this.getY = () => parseInt(this.elemento.style.bottom.split("px")[0]);
   this.setY = (y) => (this.elemento.style.bottom = `${y}px`);
 
+  //Quando alguma tecla é apertada o passaro voa
   window.onkeydown = (e) => (voando = true);
   window.onkeyup = (e) => (voando = false);
 
@@ -141,7 +165,9 @@ function Progresso() {
   this.atualizarPontos(0);
 }
 
-const barreiras = new Barreiras(700, 1200, 400, 400);
+
+//TESTE
+const barreiras = new Barreiras(900, 1200, 400, 400);
 const passaro = new Passaro(700);
 const areaDoJogo = document.querySelector("[wm-flappy]");
 areaDoJogo.appendChild(passaro.elemento);
