@@ -14,6 +14,22 @@
     <div>2</div>
 
     <script>
-        // ...
+        //JQuery é usado a partir do $
+        $('div').hide(5000).show(5000).fadeOut(5000) //CHamadas em cadeia (todas retornam o This ou seja o proprio objeto)
+
+
+        console.log($('div').get(1))
+
+        //Funções utilitarias de dentro do JQuery
+        console.log($.isEmptyObject({ nome: null}))
+        console.log(jQuery.inArray(3, [1,2,3]))
+
+        //Plugin para alterar a cor de fundo 
+        $.fn.fundoVerde = function(){
+            this.css('background-color', 'green')
+            return this
+        }
+
+        $('body').fundoVerde().fadeOut(1000)
     </script>
 </body>
