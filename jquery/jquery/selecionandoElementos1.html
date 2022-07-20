@@ -49,6 +49,19 @@
     </form>
 
     <script>
-        // ...
+        $('#feira').addClass('destaque').removeClass('destaque') //Selecionando elemento por ID
+        $('li').addClass('destaque') //Seleciona o elemento pela tag
+        $('[wm-obrigatorio').removeClass('destaque') //Seleciona o elemento por propriedade
+        $('li.opcional').removeClass('destaque') //Seleciona o elemento por class da tag
+        $('div p span').addClass('destaque')// Seleciona Elemento por herança
+
+        // Exclusivos JQuery
+        $('li:first').css('border', 'solid 3px yellow') //Seleciona o elemento por tag e usa o filtro para ser somente o primweiro
+        $('li:odd').css('border', 'solid 10px orange') //Seleciona o Elemento pela tag e usa o filtro para ser somente os impares
+        $('li:gt(1)').css('border', 'solid 10px white')//Seleciona o Elemento pela tag e usa o filtro para pegar elementos maiores doq o indice escolhido 
+        $('li:not(:last)').css('border', 'none')//Seleciona o Elemento pela tag e usa o filtro para pegar elementos que não sejam o primeiro
+        $('li:contains("r")').css('background-color', 'black') ///Seleciona o Elemento pela tag e usa o filtro para pegar elementos que contem certos caracteres
+
+
     </script>
 </body>
