@@ -14,3 +14,5 @@ Aqui começo meus estudos sobre a linguagem Javascript:
  09/05/2022 - Já terminei os primeiros exercícios e estou fazendo a parte de array  
  
  18/05/2022 - HTML - CSS - JAVASCRIPT
+ 
+ 19/07/2022 - JQuery
