@@ -62,6 +62,12 @@
         $('li:not(:last)').css('border', 'none')//Seleciona o Elemento pela tag e usa o filtro para pegar elementos que não sejam o primeiro
         $('li:contains("r")').css('background-color', 'black') ///Seleciona o Elemento pela tag e usa o filtro para pegar elementos que contem certos caracteres
 
+        //Filtros Jquery
+        $('form *').hide() //Escode todos os elementos JQuery
+        $('form : text').show() //Exibe elementos input tipo Text
+        $('form :password').show() //Exibe elementos input do tipo password
+        $('form: checkbox').show() //Exibe elemetos checkbox
+        $('form :radio').show() //Exibe elemento do tipo Radio 
 
     </script>
 </body>
