@@ -19,7 +19,18 @@
             { nome: 'Carlos', nota: 7.6 },
             { nome: 'Julia', nota: 9.7 }
         ]
+
+        const pessoasArray = pessoas.length;
         
-        // ...
+        const conteudo = $('#conteudo')
+        const tabela = $('<table><tr><th>"Nome"</th><th>"Nota</th></tr></table>')
+
+        pessoas.forEach(e => {
+            tabela.append($(`<tr><td>${e.nome}</td><td>${e.nota}</td></tr>`))
+        })
+
+        conteudo.append(tabela)
+
+
     </script>
 </body>
