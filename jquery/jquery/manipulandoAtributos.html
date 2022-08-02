@@ -23,6 +23,42 @@
     <h1>Manipulando Atributos</h1>
     <div wm-relogio='1000'></div>
     <script>
-        // ...
+        function Relogio(elemento){
+            const horaCerta =$('<p>') //Adiciona um paragrafo
+            const botaoMenos = $('<button>').html('-') //Cria um botao e adiciona "-" ao seu conteudo
+            const botaoMais = $('<button>').html('+') //Cria um botao e adiciona "+" ao seu conteudo
+
+            const $elemento = $(elemento) //Recebe o elemento da DOM
+            $elemento.append(horaCerta, botaoMenos, botaoMais) //Adiciona os botoes ao elemento
+
+            const getIntervaloAtual = () => parseInt($elemento.attr('wm-relogio')) //Transforma o valor da propriedade em inteiro
+
+            let temporizador = null //Inicia o temporizador como null
+
+            const iniciar = () => {
+                if(temporizador) clearInterval(temporizador) //Se o temporizador estiver vazio ele limpa o temporizador atual
+                temporizador = setInterval(() =>{
+                    horaCerta.html(new Date().toLocaleString('pt-BR')) //Envia para o elemento da DOM a data e horas atual 
+                }, getIntervaloAtual()) //Atualizando o tempo a partir do valor da propriedade 
+            }
+            
+            const alterarIntervalo = delta => {
+                const novo = Math.max(getIntervaloAtual() + delta, 1000) //Verifica se o valor do intervalo nãp é menor que 1000 ele sempre vai retornar o maior valor entre 2 numeros
+                $elemento.attr('wm-relogio', novo) //Seta um novo valor para o atributo
+                iniciar()
+            }
+
+            botaoMenos.click(e => alterarIntervalo(1000))
+            botaoMais.click(e => alterarIntervalo(-1000))
+            iniciar()
+        }
+
+        $('[wm-relogio]').each((i, e) => new Relogio(e))
+
+         // $('[wm-relogio]').attr('opa') // ler o atributo
+        // $('[wm-relogio]').attr('opa', 3) // alterar ou incluir
+        $('[wm-relogio]').attr({ opa: 1, novo: true }) // adiciona atributos 
+        // $('[wm-relogio]').removeAttr('opa').removeAttr('novo') // remove atributos
+
     </script>
 </body>
