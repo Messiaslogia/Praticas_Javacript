@@ -21,24 +21,24 @@
         $('#div1').prepend('0, ') //Adiciona um elemento na primeira posição
 
         $('<span>, 3</span>').appendTo('#div1') //Envia um elemento para o seletor
-        $('<span>-1, </span>').prependTo('#div1') //Envia o elemento para o começo do seletor
+        // $('<span>-1, </span>').prependTo('#div1') //Envia o elemento para o começo do seletor
 
-        $('#div2').before('<p>Antes 2</p>') //Adiciona um elemento antes do seletor
-        $('#div2').after('<p>Antes 2</p>') //Adiciona um elemento depois do seletor
+        // $('#div2').before('<p>Antes 2</p>') //Adiciona um elemento antes do seletor
+        // $('#div2').after('<p>Antes 2</p>') //Adiciona um elemento depois do seletor
 
-        $('<p>Antes 3</p>').insertBefore('#div3') //Adiciona um elemento antes do seletor
-        $('<p>Depois 3</p>').insertAfter('#div3') //Adiciona um elemento depois do seletor
+        // $('<p>Antes 3</p>').insertBefore('#div3') //Adiciona um elemento antes do seletor
+        // $('<p>Depois 3</p>').insertAfter('#div3') //Adiciona um elemento depois do seletor
 
         $('p.numero').wrap('<div>') //Envolve o elemento junto com o seletor 
-        $('p.numero').wrapAll('<div id="div4">')//Envolve o elemento junto com o seletor 
-        $('#div4').empty() //Limpa o conteudo do seletor. *não é deletada
-        $('#div3, #div4').prev().remove() //Remove o conteudo dos seletores *Apaga mesmo
+        // $('p.numero').wrapAll('<div id="div4">')//Envolve o elemento junto com o seletor 
+        // $('#div4').empty() //Limpa o conteudo do seletor. *não é deletada
+        // $('#div3, #div4').prev().remove() //Remove o conteudo dos seletores *Apaga mesmo
 
-        $('<div>Substituto</div>').replaceAll('body > p') //Substitui todos os elementos passados por seletores
-        $('body > p').replaceWith('<div>Substituto</div>') //Substitui todos os elementos passados por seletores
+        // $('<div>Substituto</div>').replaceAll('body > p') //Substitui todos os elementos passados por seletores
+        // $('body > p').replaceWith('<div>Substituto</div>') //Substitui todos os elementos passados por seletores
 
-        $('body > p').replaceWith(function() {
-           return $('<div>').html($(this).html()).append('!!!')}) //Trocando elementos do seletor 
+        // $('body > p').replaceWith(function() {
+        //    return $('<div>').html($(this).html()).append('!!!')}) //Trocando elementos do seletor 
 
     </script>
 </body>
