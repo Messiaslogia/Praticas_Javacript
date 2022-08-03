@@ -12,14 +12,21 @@
     <h1>Modificando HTML #03</h1>
     <div id='conteudo'></div>
 
+<<<<<<< HEAD
 
     <!-- <script>
         const pessoas = [
+=======
+    <script>
+        $(function(){
+        const alunos = [
+>>>>>>> e273104d7b28abee357928fa9fc35b5ebec47f97
             { nome: 'Ana', nota: 9.1 },
             { nome: 'Bianca', nota: 8.4 },
             { nome: 'Carlos', nota: 7.6 },
             { nome: 'Julia', nota: 9.7 }
         ]
+<<<<<<< HEAD
 
         const tabela = $('<table>')
         $('#conteudo').append(tabela)
@@ -34,4 +41,37 @@
                 
         // } 
     </script> -->
+=======
+        
+        //Professor
+
+        const linhas = alunos.map(aluno => { //map espera uma função para cada elemento do array
+            const tdNome = $('<td>').html(aluno.nome)
+            const tdNota = $('<td>').html(aluno.nota)
+            // return $('<tr>').append(tdNome).append(tdNota)
+            // return $('<tr>').append([tdNome, tdNota])
+            return $('<tr>').append(tdNome, tdNota)
+        })
+
+        const tabela = $('<table>').append(linhas)
+            .css('border', 'solid 5px')
+            $('#conteudo').append(tabela)
+        })
+
+
+        //Feito por mim
+        // const pessoasArray = pessoas.length;
+        
+        // const conteudo = $('#conteudo')
+        // const tabela = $('<table><tr><th>"Nome"</th><th>"Nota</th></tr></table>')
+
+        // pessoas.forEach(e => {
+        //     tabela.append($(`<tr><td>${e.nome}</td><td>${e.nota}</td></tr>`))
+        // })
+
+        // conteudo.append(tabela)
+
+
+    </script>
+>>>>>>> e273104d7b28abee357928fa9fc35b5ebec47f97
 </body>

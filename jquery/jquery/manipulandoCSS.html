@@ -15,6 +15,28 @@
     <div id='div3'>3</div>
     <div id='resultado'></div>
     <script>
-        // ...
+        const fonte =  $('#div1').css('font-family') //Acessa a propriedade css do elemento
+        $('#resultado').append(`Fonte é ${fonte}`) 
+
+        $('#div1').css('font-size', '3em')//Modificando ou incluindo valores a propriedade do elemento
+        $('#div1').css({'font-size': '3.5em', 'color': 'yellow'})//Mexendo com varios atributos apartir de um objeto
+        $('#div1').css('font-size', function (){
+            return `${2 * 2}em`
+        }) //Recebendo uma função callback para modificar um atributo das propriedades do elemento
+
+        $('#div2').addClass('destaque') //Adiciona a classe destaque ao elemento 
+
+        const temClasse = $('#div2').hasClass('destaque') //Verifica se existe a classe retorna um bollean 
+        $('#resultado').append(`<br> Tem Class? ${temClasse}`)
+
+        $('#div2').removeClass('destaque') //Remove a classe do elemento
+        $('#div2').toggleClass('destaque') //Verifica se a classe existe se ss ela remove se não ela adiciona 
+        $('#div2').toggleClass('destaque')
+
+        $('#resultado').append('<div id= teste>')
+        $('#teste').append(`Essa bosta pega? ${temClasse}`)
+        
+
+
     </script>
 </body>
