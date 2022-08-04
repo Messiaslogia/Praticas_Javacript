@@ -21,6 +21,24 @@
     <input type="text" placeholder="Digite e Selecione">
     <div id="resultado2">?</div>
     <script>
-        // ...
+        const alterarDestaque = () => $('#div1').toggleClass('destaque') //Constante que carrega uma função anonima com um evento
+       // $('#div1').on('mouseenter mouseleave', alterarDestaque) //Posso chamar 2 eventos no mesmo elemento, on é quando um evento é acionado O método on() anexa um ou mais manipuladores de eventos para os elementos selecionados e elementos filho.
+        $('div').hover(alterarDestaque, alterarDestaque) //Chamando dois eventos
+
+        $('#div1').one('mouseenter', e=> alert( 'Aviso')) //one vai executar um evento apaenas uma vez 
+        $('#div1').dblclick(e => $('#div1').fadeOut(1000).fadeIn(1000)) //dblclick é um evento de double click no elemento
+
+        $(window).resize(function(e) //Conte o número de vezes que a janela do navegador é redimensionada:
+        {
+            const l = $(window).width() //Pega a Largura da janela
+            const a = $(window).height() //Pega a Altura da janela
+            $('#resultado1').html(`Largura ${l} e Altura: ${a}`)
+        })
+
+        $(':input').select(e => { //Evento de seleção 
+            const inicio = e.target.selectionStart //Pega a primeira parte do elemento selecionado
+            const fim = e.target.selectionEnd //Pega a ultima parte do elemento selecionado
+            $('#resultado2').html(e.target.value.substring(inicio, fim)) //substitui o valor do elemento
+        })
     </script>
 </body>

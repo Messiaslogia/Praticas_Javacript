@@ -43,7 +43,7 @@
         $('input').keyup(function (e) { //Registra a entradade dados do teclado
             const valor = $(this).val() //O método val() retorna ou define o atributo value dos elementos selecionado
             if (valor.match(/#[\da-fA-F]{3,6}/)){ //Verifica se o valor é contido na string
-                $('body').css('background-color', valor) //Passa o valor como parametro da propriedade
+                $('body').css('background-color', valor) //Passa o valor como parametro da propriedade§§
             }else{
                 $('body').css('background-color', backgroundOriginal)
             }
