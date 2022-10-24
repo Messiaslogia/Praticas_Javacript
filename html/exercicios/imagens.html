@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html id="html">
+ 
+<head>
+    <meta charset="utf-8">
+    <meta lang="pt-br">
+    <style>
+        img {
+            display: block;
+            position: absolute;
+            display: none;
+        }
+ 
+        #slider {
+            width: 540px;
+            height: 320px;
+        }
+    </style>
+</head>
+ 
+<body>
+    <div id="slider">
+        <img id="1" src="http://files.cod3r.com.br/curso-web/imagem1.jpg" width="540" height="320">
+ 
+        <img id="2" src="http://files.cod3r.com.br/curso-web/imagem2.gif" width="540" height="320">
+ 
+        <img id="3" src="http://files.cod3r.com.br/curso-web/imagem3.png" width="540" height="320">
+ 
+        <img id="4" src="http://files.cod3r.com.br/curso-web/imagem4.jpg" width="540" height="320">
+ 
+        <img id="5" src="http://files.cod3r.com.br/curso-web/logo-estreita.png">
+ 
+    </div>
+ 
+    <div id="preencher">
+    </div>
+ 
+<style>
+    .circular {
+        width: 513;
+        height: 342;
+        background-color: aqua;
+    }
+ 
+    .texto {
+        width: 400px;
+        text-align:"left"
+    }
+ 
+    .texto img {
+        margin: 10px 10px 5px 2px;
+    }
+ 
+    .cidade {
+        width: 513px;
+        height: 342;
+        background-image: url('https://www.aprenderexcel.com.br//imagens/post/385/2901-1.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 200%;
+    }
+    
+</style>
+
+<script>
+    const slider = document.getElementById('slider')
+        let indiceImagemRenderizada = '1'
+ 
+        function ladoDireito(slider) {
+            return new Promise((acerto, erro) => {
+                const larguraTela = window.innerWidth
+                const larguraSlider = slider.offsetWidth
+ 
+                function executadaIntervalo() {
+                    const distancias = slider.getBoundingClientRect()
+                    const acrescentador = 20
+                    const parteNumerica = Number(slider.style.marginLeft.replace('px', ''))
+                    slider.style.marginLeft = `${parteNumerica + acrescentador}px`
+                    if (distancias.right >= larguraTela + larguraSlider + 20) {
+                        acerto()
+                        clearInterval(intervalo)
+                    }
+                }
+ 
+                const intervalo = setInterval(executadaIntervalo, 25)
+            })
+        }
+ 
+        function ladoEsquerdo(slider) {
+            return new Promise((acerto, erro) => {
+                const larguraTela = window.innerWidth
+                const larguraSlider = slider.offsetWidth
+ 
+                function executadaIntervalo() {
+                    const distancias = slider.getBoundingClientRect()
+                    const acrescentador = -20
+                    const parteNumerica = Number(slider.style.marginLeft.replace('px', ''))
+                    slider.style.marginLeft = `${parteNumerica + acrescentador}px`
+                    if (distancias.left <= -larguraSlider) {
+                        acerto()
+                        clearInterval(intervalo)
+                    }
+                }
+ 
+                const intervalo = setInterval(executadaIntervalo, 25)
+            })
+        }
+ 
+        function renderizar(indice) {
+            if (indice == '1') {
+                document.getElementById('5').style.display = 'none'
+                document.getElementById(indice).style.display = 'block'
+            } else {
+                document.getElementById(`${Number(indice) - 1}`).style.display = 'none'
+                document.getElementById(indice).style.display = 'block'
+            }
+        }
+ 
+        async function executarTudo() {
+            await ladoDireito(slider).then(() => console.log('Pronto'))
+            if (indiceImagemRenderizada === '5') {
+                indiceImagemRenderizada = '1'
+            } else {
+                indiceImagemRenderizada = `${Number(indiceImagemRenderizada) + 1}`
+            }
+            renderizar(indiceImagemRenderizada)
+            await ladoEsquerdo(slider).then(() => console.log('Pronto'))
+            if (indiceImagemRenderizada === '5') {
+                indiceImagemRenderizada = '1'
+            } else {
+                indiceImagemRenderizada = `${Number(indiceImagemRenderizada) + 1}`
+            }
+            renderizar(indiceImagemRenderizada)
+            executarTudo()
+        }
+ 
+        renderizar(indiceImagemRenderizada)
+        executarTudo()
+</script>
