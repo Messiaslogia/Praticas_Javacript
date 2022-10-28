@@ -16,3 +16,5 @@ Aqui começo meus estudos sobre a linguagem Javascript:
  18/05/2022 - HTML - CSS - JAVASCRIPT
  
  19/07/2022 - JQuery
+ 
+ 23/10/2022 - Revisando e se aprofundando em HTML - CSS - JavaScript 
