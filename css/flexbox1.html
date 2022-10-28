@@ -6,7 +6,59 @@
     <title>Flexbox #01</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        div{
+            border: solid 5px dodgerblue;
+            font-size: 40px;
+            margin: 5px;
+        }
+
+        .big{
+            font-size: 1.5em;
+        }
+
+        .flex-container{
+            display: flex;
+            flex-direction: column; /*Transforma os elementos do flex-box em colunas*/
+            flex-direction: column-reverse; /*Transforma os elementos do flex-box em colunas*/
+            flex-direction: row-reverse; /*Deixa os elementos inline e inverte suas posições*/
+            flex-direction: row; /*Deixa os elementos inline*/
+            width: 50%;
+            flex-wrap: wrap; /*Faz os elementos dentro da fleBox se encaixarem dentro dela qubrando uma linha respeitando seu tamanho */
+            flex-wrap: wrap-reverse; /*Faz os elementos se encaixarem e os inverte*/
+            flex-flow:row wrap ; /*wrap padrão*/
+            height: 200px;
+            flex-flow: column-reverse;
+            flex-flow: row wrap;
+
+            justify-content: flex-start; /*Leva os elementos para o lado esquendo da página*/
+            justify-content: flex-end;/*Leva os elementos para o lado direito da página*/
+            justify-content: center;/*Centraliza os elementos*/
+            justify-content: space-around;/*Divide os espaçoes entre os elemntos por igual*/
+            flex-direction: row-reverse;/*Inverte a posição da linha*/
+            justify-content: space-between;/*Divide os espaçoes entre os elemntos por igual Inverte a posição dos elementos*/
+            
+
+            /* Cross Axis */
+
+            height: 400px;
+            align-items:stretch;
+            align-items:baseline;
+            align-items:flex-start; /*Leva Todos os elementos para o inicio do container*/
+            align-items:flex-end;/*Leva Todos os elementos para o fim do container*/
+            align-items:center;/*Leva Todos os elementos para o centro do container*/
+
+            /*Mais de uam linha*/
+            align-content: flex-start;
+            align-content: flex-end;
+            align-content: center;
+            align-content: space-around;
+            align-content: space-between;
+            
+        }
+
+        
+
+        
     </style>
 </head>
 
