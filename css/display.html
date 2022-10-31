@@ -6,31 +6,35 @@
     <title>Display</title>
     <style>
         body{
-            font-size: 40px;
-            color: #fff;
-            background-color: coral;
+            font-size: 40px; /*Define o tamanho da font*/
+            color: #fff; /*definir a cor do texto*/
+            background-color: coral; /*propriedade define a cor de fundo de um elemento.*/
         }
 
         ul{
-            padding: 0;
+            padding: 0; /* é usado para criar espaço ao redor do conteúdo de um elemento, dentro de qualquer borda definida.*/
         }
         
         div{
-            background-color: seagreen;
+            background-color: seagreen;  /*propriedade define a cor de fundo de um elemento.*/
         }
         span{
-            background-color: dodgerblue;
+            background-color: dodgerblue;  /*propriedade define a cor de fundo de um elemento.*/
         }
         li{
-            background-color: purple;
+            background-color: purple;  /*propriedade define a cor de fundo de um elemento.*/
         }
 
         div, span, li{
-            width: 50%;
-            width: 200px;
-            height: 80px;
-            padding-top: 30px;
-            text-align: center;
+            width: 50%; /*propriedade define a largura de um elemento.*/
+            width: 200px; /*propriedade define a largura de um elemento.*/
+            height: 80px; /*propriedade define a altura de um elemento.*/
+            padding-top: 30px; /* é usado para criar espaço ao redor do conteúdo de um elemento, dentro de qualquer borda definida.*/
+            text-align: center; /*propriedade especifica o alinhamento horizontal do texto em um elemento.*/
+            
+            /* Comparado com display: inline, a principal diferença é que display: inline-blockpermite definir uma largura e uma altura no elemento.
+            Além disso, com display: inline-block, as margens/preenchimentos superiores e inferiores são respeitados, mas com display: inlineeles não
+            Comparado com display: block, a principal diferença é que display: inline-blocknão adiciona uma quebra de linha após o elemento, então o elemento pode ficar ao lado de outros elementos. */
             display: inline;
             display: block;
             display: inline-block;
