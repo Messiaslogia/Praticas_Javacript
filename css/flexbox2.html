@@ -12,17 +12,19 @@
         }
 
         .flex-container{
-            box-sizing: border-box;
+            box-sizing: border-box; /*nos permite incluir o preenchimento e a borda na largura e altura total de um elemento.*/
         }
 
         .flex-container{
             display: flex;
-            height: 300px;
-            width: 600px;
+            height: 300px; /*propriedade define a altura de um elemento*/
+            width: 600px; /*propriedade define a largura de um elemento*/
         }
 
         .flex-container	 div:nth-child(3){
-            background-color: indianred;
+            background-color: indianred; /*propriedade define a cor de fundo de um elemento.*/
+
+            /*propriedade especifica a ordem de um item flexível em relação ao restante dos itens flexíveis dentro do mesmo contêiner.*/
             order: 1;
             order: 0;
             order: -1;
@@ -33,22 +35,25 @@
         }
 
         .flex-container div{
-            width: 100px;
+            width: 100px; /*propriedade define a largura de um elemento*/
+
+            /*propriedade especifica quanto o item crescerá em relação ao restante dos itens flexíveis dentro do mesmo contêiner.*/
             flex-grow: 0;
             flex-grow: 1;
         }
 
         .flex-container div:nth-child(1){
+            /*propriedade especifica quanto o item crescerá em relação ao restante dos itens flexíveis dentro do mesmo contêiner.*/
             flex-grow: 2;
         }
 
         .flex-container {
-            width: 300px;
-            flex-shrink: 1;
+            width: 300px; /*propriedade define a largura de um elemento*/
+            flex-shrink: 1; /*propriedade especifica como o item será reduzido em relação ao restante dos itens flexíveis dentro do mesmo contêiner.*/
         }
 
         .flex-container div:nth-child(1) {
-            flex-shrink: 5;
+            flex-shrink: 5; /*propriedade especifica como o item será reduzido em relação ao restante dos itens flexíveis dentro do mesmo contêiner.*/
         }
 
 

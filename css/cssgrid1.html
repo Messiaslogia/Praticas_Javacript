@@ -9,22 +9,24 @@
         
         html,
         body {
-            margin: 20px;
-            height: calc(100% - 40px);
-            background-color: lightgray;
+            margin: 20px; /*propriedade define a margem de um elemento.*/
+            height: calc(100% - 40px); /*propriedade define a largura de um elemento*/
+            background-color: lightgray; /*propriedade define a cor de fundo de um elemento.*/
         }
         
         div {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            border: solid 5px dodgerblue;
+            align-items: center; /*propriedade especifica o alinhamento padrão para itens dentro do contêiner flexível.*/
+            justify-content: center; /*propriedade alinha os itens do container flexível quando os itens não utilizam todo o espaço disponível no eixo principal (horizontal).*/
+            font-size: 30px; /*Define o tamanho da font*/
+            border: solid 5px dodgerblue; /*propriedade especifica que tipo de borda exibir.*/
             background: #fff;
         }
 
         body {
             display: grid;
+
+            /*propriedade especifica o número (e as larguras) de colunas em um layout de grade. Os valores são uma lista separada por espaços, onde cada valor especifica o tamanho da respectiva coluna.*/
             grid-template-columns: 50% 50%;
             grid-template-columns: repeat(4, 8.33% 8.33% 8.33%);
             grid-template-columns: repeat(12, 8.33%);
@@ -32,27 +34,33 @@
             /* minmax(100px, 300px) */
             grid-template-columns: 200px 20% 1fr;
             grid-template-columns: 3fr 6fr 3fr;
+
+            /*propriedade especifica o número (e as alturas) das linhas em um layout de grade. Os valores são uma lista separada por espaços, onde cada valor especifica a altura da respectiva linha.
+*/
             grid-template-rows: 50% 25% 12.5% 12.5%;
             grid-template-rows: 100px 1fr;
             grid-template-rows: 100px auto auto auto;
         }
 
         .d8 {
-            grid-column-start: 2;
-            grid-column-end: 4;
+            grid-column-start: 2; /*propriedade define em qual linha de coluna o item será iniciado.*/
+            grid-column-end: 4; /*propriedade define quantas colunas um item abrangerá ou em qual linha de coluna o item terminará (veja o exemplo no final desta página).*/
             grid-column-end: span 2;
-            grid-row-start: 3;
-            grid-row-end: 5;
-            grid-row-end: span 2;
+
+            grid-row-start: 3; /*propriedade define em qual linha de linha o item será iniciado*/
+            grid-row-end: 5; /*propriedade define em qual linha de linha o item será iniciado.*/
+            grid-row-end: span 2; /*propriedade define em qual linha de linha o item será iniciado.*/
         }
 
         .d10,
         .d11 {
             /* podem se sobrepor */
-            grid-column-start: 1;
-            grid-column-end: 3;
-            grid-row-start: 5;
-            grid-row-end: span 1;
+            grid-column-start: 1; /*propriedade define em qual linha de coluna o item será iniciado.*/
+            grid-column-end: 3; /*propriedade define quantas colunas um item abrangerá ou em qual linha de coluna o item terminará (veja o exemplo no final desta página).*/
+
+
+            grid-row-start: 5; /*propriedade define em qual linha de linha o item será iniciado.*/
+            grid-row-end: span 1; /*propriedade define em qual linha de linha o item será iniciado.*/
         }
 
         .d10 {
