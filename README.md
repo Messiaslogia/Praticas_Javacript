@@ -20,4 +20,6 @@ Aqui começo meus estudos sobre a linguagem Javascript:
  23/10/2022 - Revisando e se aprofundando em HTML - CSS - JavaScript 
 
  16/11/2022 - Node
+
+ 01/12/2022 - ESnext
  
