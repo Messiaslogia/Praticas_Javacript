@@ -13,11 +13,7 @@ const storage = multer.diskStorage({
         callback(null, './upload')
     },
     filename: function(req, file, callback) {
-<<<<<<< HEAD
         callback(null, `${Date.now()}_${file.originalname}`)
-=======
-        callback(null, `${Data.now()}_${file.originalname}`)
->>>>>>> 30b5773e97a72e4c6f377e3eac59e43e958f560c
     }
 })
 
@@ -26,7 +22,6 @@ const upload = multer({ storage }).single('arquivo')
 app.post('/upload', (req, res) => {
     upload(req, res, err => {
         if (err) {
-<<<<<<< HEAD
             return res.end('Ocorreu um erro.')
         }
 
@@ -48,12 +43,6 @@ app.get('/parOuImpar', (req, res) => {
     const par = parseInt(req.query.numero) % 2 === 0
     res.send({
         resultado: par ? 'par' : 'impar'
-=======
-            return res.end('Ocorreu um erro')
-        }
-
-        res.end('Concluido com sucesso')
->>>>>>> 30b5773e97a72e4c6f377e3eac59e43e958f560c
     })
 })
 
