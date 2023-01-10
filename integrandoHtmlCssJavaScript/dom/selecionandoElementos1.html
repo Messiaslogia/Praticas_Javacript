@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Selecionar Elementos #01</title>
     <link rel="stylesheet" href="css/estilo.css">
 </head>
+
 <body class='conteudo exercicio'>
     <div id="primeiro">#primeiro</div>
     <div>Segundo</div>
     <div class="ultimo terceiro"><span wb-attrib>.Terceiro .ulitmo</span></div>
+
+
     <script>
         //Retorna um HTML Collection
         document.getElementById('primeiro').classList.add('destaque') //Pega o ID do elemento e adiciona uma classe a ele
 
-        const divs = document.getElementsByTagName('div')// Pega a Tag do elemento
-        Array.from(divs).forEach(e=>e.classList.add('destaques'))//Transforma um HTML colletion em um Array
+        const divs = document.getElementsByTagName('div') // Pega a Tag do elemento
+        Array.from(divs).forEach(e => e.classList.add('destaques')) //Transforma um HTML colletion em um Array
+
+
 
         //Consegue percorrer o array pelo nome da class
-        const ultimosElementos = document.getElementsByClassName('ultimo')// Pega o nome da classe
-        for(let a of ultimosElementos){
-            e.classList.remove('destaque') //Removendo a classe do elemento
+        const ultimosElementos = document.getElementsByClassName('ultimo') // Pega o nome da classe
+        console.log(ultimosElementos)
+        for (let a of ultimosElementos) {
+            a.classList.remove('destaque') //Removendo a classe do elemento
         }
     </script>
 </body>
+
 </html>
