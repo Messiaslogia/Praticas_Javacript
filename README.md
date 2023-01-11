@@ -25,3 +25,5 @@ Aqui começo meus estudos sobre a linguagem Javascript:
 
  21/12/2022 - Ajax
  
+ 11/01/2023 -  Gulp
+ 
