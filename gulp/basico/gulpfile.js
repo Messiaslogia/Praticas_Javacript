@@ -2,11 +2,9 @@ const gulp = require('gulp')
 const { series, parallel } = require('gulp')
 
 const antes1 = cb => {
-    console.log('Tarefa Antes 1')
+    console.log('Tarefa Antes 1!')
     return cb()
 }
-
-
 
 const antes2 = cb => {
     console.log('Tarefa Antes 2!')
@@ -25,7 +23,6 @@ function copiar(cb) {
         .pipe(gulp.dest('pastaB'))
     return cb()
 }
-
 
 const fim = cb => {
     console.log('Tarefa Fim!')
