@@ -1,0 +1,15 @@
+{
+    "name": "node",
+    "version": "1.0.0",
+    "description": "",
+    "main": "arquivoEscrita.js",
+    "scripts": {
+        "start": "nodemon arquivoEscrita.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "nodemon": "^2.0.20"
+    }
+}

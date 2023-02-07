@@ -1,4 +1,3 @@
-
 // Importando Modulo com require
 const moduloA = require('./moduloA')
 const moduloB = require('./moduloB')
